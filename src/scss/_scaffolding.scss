@@ -1,0 +1,73 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+	margin: 0 auto;
+	background-color: #000;
+	background-image: url(../images/pattern.jpg);
+	background-size: 70px;
+	font: {
+		family: "Trebuchet MS", sans-serif;
+		weight: 400;
+		style: normal;
+		size: 13px;
+	}
+	line-height: 16px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 320px;
+	height: 100vh;
+	@media (max-width: 1023px) {
+		height: auto;
+	}
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+main {
+	margin-top: -29px;
+	@media (max-width: 1023px) {
+		margin-top: 0;
+		padding-top: 34px;
+		padding-bottom: 20px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 27px;
+		padding-bottom: 10px;
+	}
+}
+
+.color-blue {
+	color: $blue;
+}

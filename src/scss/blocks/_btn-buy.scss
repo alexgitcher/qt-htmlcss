@@ -1,0 +1,26 @@
+.btn-buy {
+  position: relative;
+  color: $blue;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+  touch-action: manipulation;
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 1px;
+    width: 100%;
+    bottom: 0;
+    height: 1px;
+    background-image: repeating-linear-gradient(to right, $blue 0, $blue 3px, transparent 3px, transparent 5px);
+    z-index: 1;
+    transition: background-image .2s ease-in-out;
+  }
+  &:hover {
+    color: $blue-hover;
+  }
+  &:hover::after {
+    background-image: repeating-linear-gradient(to right, $blue-hover 0, $blue-hover 3px, transparent 3px, transparent 5px);
+  }
+}

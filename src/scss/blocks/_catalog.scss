@@ -1,0 +1,19 @@
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease-in-out,
+    visibility .2s ease-in-out;
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media (max-width: 767px) {
+    display: block;
+  }
+}

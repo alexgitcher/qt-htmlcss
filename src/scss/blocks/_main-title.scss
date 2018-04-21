@@ -1,0 +1,22 @@
+.main-title {
+  font-size: 36px;
+  line-height: 43px;
+  font-family: 'exo2', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 0 #000;
+  margin-bottom: 23px;
+  @media (max-width: 1023px) {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  @media (max-width: 767px) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+}
+
