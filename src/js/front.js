@@ -50,9 +50,9 @@ function setHover() {
   for (var i = 0; i < productSelected.length; i++) {
     var product = productSelected[i];
 
-    product.addEventListener('mouseleave', function(e) {
+    product.addEventListener('mouseleave', function (e) {
       var target = e.target;
-      target.classList.add('hover-enabled');      
+      target.classList.add('hover-enabled');
     });
   }
 }
@@ -90,7 +90,27 @@ function showCatalog() {
   catalog.classList.add('catalog--visible');
 }
 
-document.addEventListener('DOMContentLoaded', function(e) {
+function setHeightToProductBody() {
+  var productBodies = document.querySelectorAll('.product__body'),
+    productBodiesLength = productBodies.length,
+    maxHeight = 0;
+
+  for (var i = 0; i < productBodiesLength; i++) {
+    var productBody = productBodies[i],
+      productBodyHeight = productBody.clientHeight;
+
+    maxHeight = productBodyHeight > maxHeight ? productBodyHeight : maxHeight;
+  }
+
+  for (var i = 0; i < productBodiesLength; i++) {
+    var productBody = productBodies[i];
+
+    productBody.style.height = maxHeight + 'px';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function (e) {
+  setHeightToProductBody();
   setTimeout(showCatalog, 200)
   selectProduct();
 });

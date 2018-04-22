@@ -828,16 +828,12 @@ main {
   font-size: 48px;
   line-height: 54px;
   margin-left: -3px;
-  max-height: 54px;
-  overflow: hidden;
 }
 
 .product__subtitle {
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 13px;
-  max-height: 29px;
-  overflow: hidden;
 }
 
 .product__desc {
@@ -846,9 +842,6 @@ main {
   line-height: 16px;
   color: #666666;
   z-index: 2;
-  min-height: 48px;
-  max-height: 48px;
-  overflow: hidden;
 }
 
 .product__img {
@@ -1122,13 +1115,11 @@ main {
   .product__title {
     font-size: 42px;
     line-height: 48px;
-    max-height: 48px;
   }
 
   .product__subtitle {
     font-size: 20px;
     line-height: 25px;
-    max-height: 25px;
   }
 
   .product__desc {
