@@ -1110,6 +1110,7 @@ main {
 
   .product__body {
     padding-bottom: 270px;
+    height: auto !important;
   }
 
   .product__title {

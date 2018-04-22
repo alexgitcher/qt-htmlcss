@@ -188,6 +188,7 @@
     transition: border-color .2s ease-in-out;
     @media (max-width: 767px) {
       padding-bottom: 270px;
+      height: auto !important;
     }
   }
 }
