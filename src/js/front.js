@@ -77,6 +77,7 @@ function selectProduct() {
 
     btn.addEventListener('click', function () {
       var productItem = this.parentElement.previousElementSibling;
+      productItem.classList.remove('hover-enabled');
       productItem.classList.add('product__item--selected');
       setHover();
     });
