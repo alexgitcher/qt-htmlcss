@@ -35,7 +35,27 @@
 //   catalog.addClass('catalog--visible');
 // }
 
+// function setHeightToProductBody() {
+//   var productBodies = $('.product__body'),
+//     productBodiesLength = productBodies.length,
+//     maxHeight = 0;
+
+//   for (var i = 0; i < productBodiesLength; i++) {
+//     var productBody = productBodies[i],
+//       productBodyHeight = $(productBody).outerHeight();
+
+//     maxHeight = productBodyHeight > maxHeight ? productBodyHeight : maxHeight;
+//   }
+
+//   for (var i = 0; i < productBodiesLength; i++) {
+//     var productBody = productBodies[i];
+
+//     $(productBody).css('height', maxHeight + 'px');
+//   }
+// }
+
 // $(document).ready(function() {
+//   setHeightToProductBody();
 //   setTimeout(showCatalog, 200)
 //   selectProduct();
 //   setHover();
