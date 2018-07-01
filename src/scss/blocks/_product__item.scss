@@ -1,0 +1,89 @@
+.product__item {
+  position: relative;
+  overflow: hidden;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    z-index: 2;
+    transition: border-color .2s ease-in-out;
+  }
+  &::before {
+    left: 0;
+    border-left: 4px solid $blue;
+    border-bottom: 4px solid $blue;
+    border-bottom-left-radius: 12px;
+  }
+  &::after {
+    right: 0;
+    border-right: 4px solid $blue;
+    border-bottom: 4px solid $blue;
+    border-bottom-right-radius: 12px;
+  }
+  &--active {
+    cursor: pointer;
+    touch-action: manipulation; 
+  }
+}
+
+.product__item {
+  &-before,
+  &-after {
+    position: absolute;
+    content: '';
+    display: block;
+  }
+  &-before {
+    top: 9px;
+    left: 12px;
+    border-left: 4px solid $blue;
+    transform: rotate(45deg);
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    z-index: -1;
+    transition: border-color .2s ease-in-out;
+  }
+  &-after {
+    bottom: 0;
+    height: 4px;
+    left: 18px;
+    right: 18px;
+    background-color: $blue;
+    z-index: 2;
+    transition: background-color .2s ease-in-out;
+  }
+}
+
+.product__item--active:hover {
+  .product__header {
+    border-top-color: $blue-hover;
+  }
+  .product__header,
+  .product__body,
+  &::before,
+  &::after {
+    border-right-color: $blue-hover;
+  }
+  .product__body,
+  .product__item-before,
+  &::before,
+  &::after {
+    border-left-color: $blue-hover;
+  }
+  .product__item-after,
+  .product__label {
+    background-color: $blue-hover; 
+  }
+  &::before,
+  &::after {
+    border-bottom-color: $blue-hover;
+  }
+}
